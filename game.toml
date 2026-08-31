@@ -1,0 +1,53 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Ace Combat 3: Electrosphere (USA)"
+id = "SLUS-00972"
+players = 1
+exe = "disc/SLUS_009.72"
+disc = ""
+load_address = "0x80160000"
+entry_pc = "0x801761F8"
+text_size = "0x00077800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Ace Combat 3 - Electrosphere (USA).bin"
+cue_name = "Ace Combat 3 - Electrosphere (USA).cue"
+boot_exe = "SLUS_009.72"
+known_sizes = [644977200]
+known_md5 = [
+  "9709b211d1e241147bcfe14e95547c5a",
+]
+known_sha1 = [
+  "9b690c02cdb7754f2fa478c4974ec69600f2f269",
+]
+known_crc32 = [
+  "a9dbe00f",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "ace-combat-3-electrosphere-usa- Recompiled"
+memcard_dir = "saves"
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "a22d06228441fa17d89888c14fc24cfd3e22d2e87a9ee52e19b5034f359652d9"

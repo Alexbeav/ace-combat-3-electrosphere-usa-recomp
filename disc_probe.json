@@ -1,0 +1,31 @@
+{
+  "cue_path": "Ace Combat 3 - Electrosphere (USA).cue",
+  "cue_name": "Ace Combat 3 - Electrosphere (USA).cue",
+  "bin_name": "Ace Combat 3 - Electrosphere (USA).bin",
+  "track_count": 1,
+  "data_track_size": 644977200,
+  "data_track_md5": "9709b211d1e241147bcfe14e95547c5a",
+  "data_track_sha1": "9b690c02cdb7754f2fa478c4974ec69600f2f269",
+  "data_track_crc32": "a9dbe00f",
+  "boot_exe": "SLUS_009.72",
+  "serial": "SLUS-00972",
+  "serial_exe": "SLUS_009.72",
+  "volume_id": "ACE3ES",
+  "display_name": "ace-combat-3-electrosphere-usa-",
+  "load_address": "0x80160000",
+  "entry_pc": "0x801761F8",
+  "text_size": "0x00077800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "a22d06228441fa17d89888c14fc24cfd3e22d2e87a9ee52e19b5034f359652d9",
+  "boot_exe_sha256": "d7c42af60a13e20dadde29799b717538a93d0e6b2455b3358ac6939e771ca9a0",
+  "seed_count": 249,
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
