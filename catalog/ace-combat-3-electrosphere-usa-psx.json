@@ -1,0 +1,68 @@
+{
+  "id": "ace-combat-3-electrosphere-usa-psx",
+  "name": "Ace Combat 3: Electrosphere (USA)",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "Ace Combat 3: Electrosphere (USA) recompiled for modern systems using psxrecomp.",
+  "homepage": "https://github.com/Alexbeav/ace-combat-3-electrosphere-usa-recomp",
+  "rom_identity": {
+    "crc32": ["a9dbe00f"],
+    "md5": ["9709b211d1e241147bcfe14e95547c5a"],
+    "sha1": ["9b690c02cdb7754f2fa478c4974ec69600f2f269"],
+    "sha256": ["32f6dda886f5d5f079ce3ade3c82fca270f39e45c85760bdbe6bfedd6b437550"],
+    "disc_serials": ["SLUS-00972"],
+    "sizes": [644977200],
+    "filenames": [
+      "Ace Combat 3 - Electrosphere (USA).cue",
+      "Ace Combat 3 - Electrosphere (USA).bin"
+    ],
+    "track_counts": [1],
+    "require_cue": true
+  },
+  "rom_extensions": [".cue", ".bin"],
+  "release": {
+    "github": "Alexbeav/ace-combat-3-electrosphere-usa-recomp",
+    "asset_glob": {
+      "linux": "*linux*",
+      "windows": "*windows*",
+      "macos": "*macos*"
+    }
+  },
+  "install_dir_name": "ace-combat-3-electrosphere-usa-recomp",
+  "launch": {
+    "linux": "Ace_Combat_3__Electrosphere__USA__Recompiled",
+    "windows": "Ace_Combat_3__Electrosphere__USA__Recompiled.exe",
+    "macos": "Ace_Combat_3__Electrosphere__USA__Recompiled"
+  },
+  "romm": {
+    "platforms": ["ps", "psx", "ps1"]
+  },
+  "author_notes": "Use the verified USA SLUS-00972 single-track CUE/BIN dump and a legal SCPH-1001 BIOS dump.",
+  "notes": "Prepared from the exact public v0.3.6 package and the locally rehashed owned disc.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "Alexbeav/ace-combat-3-electrosphere-usa-recomp",
+      "ref": "main"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
